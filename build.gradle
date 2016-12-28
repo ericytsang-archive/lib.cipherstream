@@ -26,8 +26,11 @@ repositories {
 }
 
 dependencies {
+    compile "com.github.ericytsang:lib.simplepipestream:1.0.1"
+    compile "com.github.ericytsang:lib.abstractstream:1.0.0"
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     testCompile "junit:junit:4.11"
+    testCompile "com.github.ericytsang:lib.streamtest:2.0.1"
     testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
 }
 
