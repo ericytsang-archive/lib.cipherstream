@@ -42,4 +42,10 @@ class CipherInputStream(_underlyingStream:InputStream,val cipher:Cipher):Abstrac
         decodedData.get(b,off,getLength)
         return getLength
     }
+
+    override fun doClose()
+    {
+        underlyingStream.close()
+        doNothing()
+    }
 }

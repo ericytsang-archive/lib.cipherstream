@@ -30,6 +30,6 @@ class CipherOutputStream(_underlyingStream:OutputStream,val cipher:Cipher):Abstr
     {
         flush()
         underlyingStream.close()
-        setClosed()
+        doNothing()
     }
 }
