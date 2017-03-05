@@ -26,10 +26,9 @@ class CipherOutputStream(_underlyingStream:OutputStream,val cipher:Cipher):Abstr
         underlyingStream.flush()
     }
 
-    override fun doClose()
+    override fun oneShotClose()
     {
         flush()
         underlyingStream.close()
-        doNothing()
     }
 }

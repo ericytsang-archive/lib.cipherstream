@@ -43,9 +43,8 @@ class CipherInputStream(_underlyingStream:InputStream,val cipher:Cipher):Abstrac
         return getLength
     }
 
-    override fun doClose()
+    override fun oneShotClose()
     {
         underlyingStream.close()
-        doNothing()
     }
 }
